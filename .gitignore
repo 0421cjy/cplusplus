@@ -34,3 +34,5 @@
 # Etc
 *.opendb
 *.db
+
+/Debug
