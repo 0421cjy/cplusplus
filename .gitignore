@@ -35,4 +35,4 @@
 *.opendb
 *.db
 
-/Debug
+cplusplus/Debug/
