@@ -35,4 +35,6 @@
 *.opendb
 *.db
 
+# Exception Root
 cplusplus/Debug/
+cplusplus/.vs/
