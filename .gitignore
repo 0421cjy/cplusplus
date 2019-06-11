@@ -34,7 +34,7 @@
 # Etc
 *.opendb
 *.db
+*.suo
 
 # Exception Root
 cplusplus/Debug/
-cplusplus/.vs/
