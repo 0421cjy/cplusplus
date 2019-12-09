@@ -56,6 +56,21 @@ int main()
 
     std::cout << "extras: " << g.extras();
 
+    std::function<int(int)> fact;
+
+    fact = [&fact](int number) -> int {
+        if (number == 0)
+        {
+            return 1;
+        }
+        else
+        {
+            return (number *= fact(number - 1));
+        }
+    };
+
+    std::cout << "factorial" << fact(4) << std::endl;
+
     int in;
     std::cin >> in;
 }
