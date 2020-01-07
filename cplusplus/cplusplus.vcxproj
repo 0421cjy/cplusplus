@@ -149,6 +149,9 @@
     <ClCompile Include="lambda.cpp" />
     <ClCompile Include="PrimeFactor.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PrimeFactor.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

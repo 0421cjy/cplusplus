@@ -1,8 +1,16 @@
-﻿#include <iostream>
+﻿#include "PrimeFactor.h"
 
 using namespace std;
 
-void FindPrimeFactor()
+MyMathClass::MyMathClass()
+{
+}
+
+MyMathClass::~MyMathClass()
+{
+}
+
+void MyMathClass::FindPrimeFactor()
 {
     while (true)
     {
@@ -18,13 +26,12 @@ void FindPrimeFactor()
         {
             while (number % i == 0)
             {
+                printf("%d ", i);
                 number /= i;
-                printf_s("%d ", i);
             }
         }
 
-        printf("\n");
-        printf("---------------------------------------------------------");
-        printf("\n");
+        // Except trivial divisor
+        if (number > 1) printf("%d \n", number);
     }
 }

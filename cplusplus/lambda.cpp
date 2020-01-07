@@ -3,6 +3,7 @@
 #include <vector>
 #include <map>
 #include <algorithm>
+#include "PrimeFactor.h"
 
 template <typename T>
 void fill(std::vector<int>& vec, T done)
@@ -69,6 +70,9 @@ int main()
     };
 
     std::cout << "factorial" << fact(4) << std::endl;
+
+    MyMathClass a;
+    a.FindPrimeFactor();
 
     int in;
     std::cin >> in;
