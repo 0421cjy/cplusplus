@@ -4,7 +4,6 @@
 #include <map>
 #include <algorithm>
 
-
 template <typename T>
 void fill(std::vector<int>& vec, T done)
 {

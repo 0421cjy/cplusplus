@@ -1,0 +1,15 @@
+﻿'cplusplus.exe'(Win32): 'C:\Users\user\Documents\cplusplus\cplusplus\x64\Debug\cplusplus.exe'을(를) 로드했습니다. 기호가 로드되었습니다.
+'cplusplus.exe'(Win32): 'C:\Windows\System32\ntdll.dll'을(를) 로드했습니다. 기호가 로드되었습니다.
+'cplusplus.exe'(Win32): 'C:\Windows\System32\kernel32.dll'을(를) 로드했습니다. 기호가 로드되었습니다.
+'cplusplus.exe'(Win32): 'C:\Windows\System32\KernelBase.dll'을(를) 로드했습니다. 기호가 로드되었습니다.
+'cplusplus.exe'(Win32): 'C:\Windows\System32\sysfer.dll'을(를) 로드했습니다. PDB 파일을 찾거나 열 수 없습니다.
+'cplusplus.exe'(Win32): 'C:\Windows\System32\msvcp140d.dll'을(를) 로드했습니다. 기호가 로드되었습니다.
+'cplusplus.exe'(Win32): 'C:\Windows\System32\ucrtbased.dll'을(를) 로드했습니다. 기호가 로드되었습니다.
+'cplusplus.exe'(Win32): 'C:\Windows\System32\vcruntime140d.dll'을(를) 로드했습니다. 기호가 로드되었습니다.
+'cplusplus.exe'(Win32): 'C:\Windows\System32\kernel.appcore.dll'을(를) 로드했습니다. 기호가 로드되었습니다.
+'cplusplus.exe'(Win32): 'C:\Windows\System32\msvcrt.dll'을(를) 로드했습니다. 기호가 로드되었습니다.
+'cplusplus.exe'(Win32): 'C:\Windows\System32\rpcrt4.dll'을(를) 로드했습니다. 기호가 로드되었습니다.
+0x584 스레드가 종료되었습니다(코드: 0 (0x0)).
+0xa8ec 스레드가 종료되었습니다(코드: 0 (0x0)).
+0x7548 스레드가 종료되었습니다(코드: 0 (0x0)).
+'[29380] cplusplus.exe' 프로그램이 종료되었습니다(코드: 0 (0x0)).
