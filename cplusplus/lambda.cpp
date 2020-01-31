@@ -16,6 +16,12 @@ void fill(std::vector<int>& vec, T done)
     }
 }
 
+template<typename T, typename = typename std::is_enable<is_class<T>::value>::type>
+void f(T a)
+{
+    return;
+}
+
 class gorp
 {
     std::vector<int> values;
@@ -72,7 +78,7 @@ int main()
     std::cout << "factorial" << fact(4) << std::endl;
 
     MyMathClass a;
-    a.FindPrimeFactor();
+    a.FindPrimeFactor2();
 
     int in;
     std::cin >> in;

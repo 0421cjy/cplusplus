@@ -10,4 +10,8 @@ public:
 
 public:
     void FindPrimeFactor();
+    void FindPrimeFactor2();
+
+private:
+    void FindPrimeFactor(int number);
 };
