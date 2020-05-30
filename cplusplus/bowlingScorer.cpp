@@ -14,14 +14,14 @@ int BowlingScorer()
     int secondHit = 0;
 
     std::vector<std::pair<int, int>> scoreVec;
-    std::vector<int> roundTotalScoreVec{ 10, 0 };
+    std::vector<int> roundTotalScoreVec(10, 0);
     scoreVec.clear();
 
     std::cout << "bowling Scorer" << std::endl;
 
     while (true)
     {
-        if (MAX_ROUND < round)
+        if (MAX_ROUND < round - 1)
         {
             int totalScore = 0;
             int round = 1;
@@ -29,19 +29,18 @@ int BowlingScorer()
             // print total score.
             for (const auto& data : scoreVec)
             {
-                std::cout << round + "Round Score" << std::endl;
-                std::cout << data.first + data.second << std::endl;
-
                 totalScore += (data.first + data.second);
+                std::cout << totalScore << " Total Score " << std::endl;
+                round++;
             }
 
-            std::cout << "totalSore : " + totalScore << std::endl;
+            std::cout << "totalSore : " << totalScore << std::endl;
             return 0;
         }
 
         if (round == MAX_ROUND)
         {
-            auto prev = scoreVec.at(round - 1);
+            auto prev = scoreVec.at(round - 2);
             if (prev.first != STRIKE)
             {
                 round++;
@@ -49,7 +48,7 @@ int BowlingScorer()
             }
         }
 
-        std::cout << round + "Round input your score ( 0 ~ 10 )" << std::endl;
+        std::cout << round << " Round input your score ( 0 ~ 10 )" << std::endl;
         std::cin >> firstHit;
 
         if (firstHit < 0 || 10 < firstHit)
@@ -67,10 +66,9 @@ int BowlingScorer()
         }
         else
         {
-            std::cout << "hit" << firstHit << "pins" << std::endl;
+            std::cout << "hit " << firstHit << " pins!!" << std::endl;
 
-            // 11 Round process.
-            if (round == MAX_ROUND)
+            if (round == MAX_ROUND + 1)
             {
                 scoreVec.push_back(std::make_pair(firstHit, 0));
                 round++;
@@ -90,27 +88,28 @@ int BowlingScorer()
             round++;
         }
 
-        if (round < 2) continue;
+        if (round < 3) continue;
 
-        auto cur = scoreVec.at(round);
-        auto prev = scoreVec.at(round - 1);
+        auto& cur = scoreVec.at(round - 2);
+        auto& prev = scoreVec.at(round - 3);
 
-        // stkire
+        // strike
         if (prev.first == STRIKE)
         {
-            prev.first += (cur.first + cur.second);
+            prev.first += cur.first;
 
-            if (round < 3) continue;
-            auto pprev = scoreVec.at(round - 2);
+            if (round < 4) continue;
+
+            auto& pprev = scoreVec.at(round - 4);
 
             // stkire
-            if (pprev.first == STRIKE)
+            if (pprev.first == STRIKE + STRIKE)
             {
                 pprev.first += (cur.first + cur.second);
             }
         }
 
-        // spair
+        // spare
         if ((prev.first + prev.second) == STRIKE)
         {
             prev.first += cur.first;
