@@ -14,7 +14,6 @@ int BowlingScorer()
     int secondHit = 0;
 
     std::vector<std::pair<int, int>> scoreVec;
-    std::vector<int> roundTotalScoreVec(10, 0);
     scoreVec.clear();
 
     std::cout << "bowling Scorer" << std::endl;
